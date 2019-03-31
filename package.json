@@ -10,7 +10,9 @@
 		"type": "git",
 		"url": ""
 	},
-	"keywords": ["CV"],
+	"keywords": [
+		"CV"
+	],
 	"author": "Max Manchak",
 	"license": "ISC",
 	"homepage": "maxmanchak.com",
