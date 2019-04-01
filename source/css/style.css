@@ -2,3 +2,8 @@
 @import url(components/_normalize.css);
 @import url(components/_general-style.css);
 @import url(components/fonts.css);
+@import url(components/navigation.css);
+@import url(components/main.css);
+@import url(components/left-block.css);
+@import url(components/team.css);
+@import url(components/title.css);

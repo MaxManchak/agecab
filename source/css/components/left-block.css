@@ -1,0 +1,23 @@
+.left-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 336px;
+  padding-top: 92px;
+
+  &--1 {
+    background-image: url(../images/left-bg-1.jpg);
+  }
+
+  &--2 {
+    background-image: url(../images/left-bg-2.jpg);
+  }
+
+  &--3 {
+    background-image: url(../images/left-bg-3.jpg);
+  }
+
+  &--4 {
+    background-image: url(../images/left-bg-4.jpg);
+  }
+}

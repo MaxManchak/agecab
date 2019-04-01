@@ -64,3 +64,12 @@ audio {
   text-overflow: ellipsis;
   width: 200px;
 }
+
+
+.wrap {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

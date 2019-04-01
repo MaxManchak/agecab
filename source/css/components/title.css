@@ -1,0 +1,109 @@
+.site-title {
+  position: absolute;
+  bottom: 149px;
+  left: 142px;
+  z-index: 10;
+  pointer-events: none;
+
+  & h1 {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #ffffff;
+    font-family: Didot;
+    font-size: 250px;
+    font-weight: 400;
+    line-height: 220px;
+    text-transform: uppercase;
+    max-width: 1032px;
+    margin-bottom: 0;
+  }
+
+  &--2 {
+    bottom: 213px;
+    left: 68px;
+
+    & h1 {
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      color: #ffffff;
+      font-family: $ffd;
+      font-size: 145px;
+      font-weight: 400;
+      line-height: 130px;
+      text-transform: uppercase;
+      max-width: 1200px;
+    }
+  }
+
+  &--3,
+  &--4 {
+    left: 0;
+    bottom: 0;
+
+    & h1 {
+      color: #ffffff;
+      font-family: $ffd;
+      font-size: 145px;
+      padding-left: 68px;
+      font-weight: 400;
+      line-height: 130px;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+      max-width: 645px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    max-width: 787px;
+
+    &--3,
+    &--4 {
+      box-shadow: 10px -10px 6px rgba(0, 0, 0, 0.34);
+      background-color: #b0b9ab;
+      padding: 73px 60px 0px 67px;
+
+      & .site-title__logo {
+        width: 187px;
+        height: 68px;
+        margin-top: 40px;
+        background-image: url(../images/page-3-logo.svg);
+      }
+    }
+
+    &--4 {
+      background-color: #807B61;
+
+      & .site-title__logo {
+        width: 187px;
+        height: 68px;
+        margin-top: 40px;
+        background-image: url(../images/page-4-logo.svg);
+      }
+    }
+  }
+
+  &__content {
+    width: calc(100% - 267px);
+    border-left: 4px solid #fff;
+    padding-left: 31px;
+
+    & h3 {
+      margin-top: 0;
+      color: #191919;
+      font-family: $ffd;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+
+    & p {
+      color: #707070;
+      font-family: "Helvetica";
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 205px;
+
+  &__header,
+  &__footer {
+    width: 100%;
+    height: 53px;
+    position: absolute;
+    border: 13px solid #fff;
+  }
+
+  &__header {
+    border-bottom: transparent;
+    top: 0;
+  }
+
+  &__footer {
+    border-top: transparent;
+    bottom: 0;
+  }
+
+  & h3 {
+    font-family: $ffd;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin-top: 26px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__person {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    width: 151px;
+    height: 151px;
+    border-radius: 50%;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    margin-bottom: 34px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-family: #ffd;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__job {
+    color: #707070;
+    font-family: "Helvetica";
+    font-size: 10px;
+    font-weight: 400;
+    // width: 80%;
+  }
+
+  &__description {
+    color: #707070;
+    font-family: "$fffl";
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #ffd;
+    font-family: Didot;
+    font-size: 20px;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+}
