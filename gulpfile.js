@@ -61,7 +61,7 @@ var config = {
 	server: {
 		baseDir: 'build/',
 	},
-	port: 80,
+	// port: 80,
 	// open: "external",
 	// tunnel: 'maxmanchak-private',
 	logPrefix: 'Frontend_Devil',

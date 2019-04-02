@@ -1,67 +1,95 @@
 @@include('./html/header.html')
-<header class="header">
+<header class="header header--5">
 	<nav class="navigation">
 		<ul>
 			<li><a href="index.html">BIENVENUE</a></li>
 			<li><a href="progress.html">NOS RÉALISATIONS</a></li>
 			<li><a href="kitchen.html">LES CUISINES</a></li>
 			<li><a href="furniture.html">LE MOBILIER</a></li>
-			<li><a href="newspaper.html" class="active">LA GAZETTE</a></li>
+			<li class="active"><a href="newspaper.html">LA GAZETTE</a></li>
 			<li><a href="contacts.html">CONTACTEZ-NOUS</a></li>
 		</ul>
 	</nav>
 </header>
-<div class="wrap">
-	<div class="site-title site-title--2">
-		<h1>BIEN- VENUE</h1>
+<div class="wrap wrap--5">
+	<aside class="left-block left-block--5">
+		<a href="index.html" class="logo"><img src="images/logo.svg" alt="logotype"></a>
+		<a href="index.html" class="logo-title">AGECAB</a>
+		<div class="menuToggle">
+			<span class="span1"></span>
+			<span class="span2"></span>
+			<span class="span3"></span>
+		</div>
+	</aside>
+	<div class="site-title site-title--5">
+		<h1>LA GAZETTE</h1>
 		<div class="site-title__description site-title__description--5">
+			<div class="mobile-rotate">
+				<p>Faite basculer votre écran
+					pour optimiser la lecture
+					de votre gazette</p>
+			</div>
 			<div class="site-title__logo"></div>
-			<h3>ELLE EST ENFIN SORTIE !</h3>
-			<p>Découvrez les actualités, les nouvelles créations et collaborations, les nouveaux évènements ou les parutions
-				dans la presse.</p>
-			<p>Ps: Dans une cuisine, c’est aussi un endroit confortable pour lire sa gazette en version papier !</p>
+			<div class="site-title__content site-title__content--5">
+				<h3>ELLE EST ENFIN SORTIE !</h3>
+				<p>Découvrez les actualités, les nouvelles créations et collaborations, les nouveaux évènements ou les parutions
+					dans la presse.</p>
+				<p class="ps">Ps: Dans une cuisine, c’est aussi un endroit confortable pour lire sa gazette en version papier !
+				</p>
+			</div>
+
 		</div>
 	</div>
-	<aside class="left-block left-block-1">
-		<a href="#" class="logo"><img src="images/logo.svg" alt="logotype"></a>
-	</aside>
 
-	<div class="main">
-		<article class="main__article article aricle--5">
-			<ul class="articles-list">
-				<li><a href="">
+
+	<div class="main  main--5">
+		<article class="main__article article article--5">
+			<ul class="articles-list scrollbar">
+				<li><a href="#">
 						<div class="articles-list__date">2018</div>
 						<div class="articles-list__title">Lorem ipsum</div>
-					</a></li>
-				<li><a href="">
+					</a>
+				</li>
+				<li><a href="#">
 						<div class="articles-list__date">2017</div>
 						<divn class="articles-list__title">Lorem ipsum</divn>
-					</a></li>
-				<li><a href="">
+					</a>
+				</li>
+				<li><a href="#">
 						<div class="articles-list__date">2016</div>
 						<div class="articles-list__title">Lorem ipsum</div>
-					</a></li>
-				<li><a href="">
+					</a>
+				</li>
+				<li><a href="#">
 						<div class="articles-list__date">2015</div>
 						<div class="articles-list__title">Lorem ipsum</div>
-					</a></li>
-				<li><a href="">
+					</a>
+				</li>
+				<li><a href="#">
 						<div class="articles-list__date">2014</div>
 						<div class="articles-list__title">Lorem ipsum</div>
-					</a></li>
-				<li><a href="">
+					</a>
+				</li>
+				<li><a href="#">
 						<div class="articles-list__date">2013</div>
 						<div class="articles-list__title">Lorem ipsum</div>
-					</a></li>
+					</a>
+				</li>
 			</ul>
-			<div class="article__content">
-				<ul class="content-list">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+			<div class="article__content popup-newspaper">
+				<button class="popup-newspaper__close">close popup button</button>
+
+				<ul class="content-list" id="flipbook">
+					<li class="active"><img src="images/second-page-img-2.1.jpg" alt=""></li>
+					<li class="active"><img src="images/second-page-img-2.2.jpg" alt=""></li>
+					<li><img src="images/second-page-img-2.3.jpg" alt=""></li>
+					<li><img src="images/second-page-img-3.jpg" alt=""></li>
+					<li><img src="images/second-page-img-4.jpg" alt=""></li>
 				</ul>
-				<div class="content-list__count"><span>1</span>/<span>4</span></div>
+				<!-- <button class="popup-newspaper__prev"></button>
+				<button class="popup-newspaper__next"></button> -->
+				<div class="content-list__count"><span class="content-list__count-item">1</span>/<span
+								class="content-list__count-all">4</span></div>
 			</div>
 		</article>
 	</div>

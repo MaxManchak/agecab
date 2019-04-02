@@ -20,7 +20,7 @@
   font-family: 'Futura Light';
   font-style: normal;
   font-weight: normal;
-  src: local('../fonts/Futura Std Light'), url('FuturaStd-Light.woff') format('woff');
+  src: local('Futura Std Light'), url('../fonts/FuturaStd-Light.woff') format('woff');
 }
 
 /* 	@font-face {

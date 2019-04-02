@@ -1,0 +1,45 @@
+@media (max-width: 1900px) {
+
+  .site-title--1,
+  .article-2__img:first-child,
+  .site-title--3,
+  .site-title--4 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 35px;
+      left: calc(50% - 23px);
+      width: 46px;
+      height: 15px;
+      background-image: url(../images/arrow.svg);
+      animation: mouse-animations;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      z-index: 9;
+    }
+  }
+}
+
+@media(max-width:640px) {
+  .site-title__description--5 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 35px;
+      left: calc(50% - 23px);
+      width: 46px;
+      height: 15px;
+      background-image: url(../images/arrow.svg);
+      animation: mouse-animations;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      z-index: 9;
+    }
+  }
+}
