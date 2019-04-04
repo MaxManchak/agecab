@@ -67,6 +67,11 @@ label {
     & input,
     & span {
       width: 50%;
+
+      & span {
+        width: 100%;
+        font-size: 12px;
+      }
     }
 
     & span {
@@ -130,7 +135,7 @@ label {
 }
 
 
-@media(max-width:1900px) {
+@media(max-width:1024px) {
   .contact-form {
     margin-top: 45px;
     margin-bottom: 45px;

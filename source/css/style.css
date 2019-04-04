@@ -3,6 +3,12 @@
 @import url(components/_general-style.css);
 @import url(components/fonts.css);
 @import url(components/navigation.css);
+
+@import url(components/article-1.css);
+@import url(components/article-2.css);
+@import url(components/article-3-4.css);
+@import url(components/article-5.css);
+@import url(components/article-6.css);
 @import url(components/main.css);
 @import url(components/left-block.css);
 @import url(components/team.css);

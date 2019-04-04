@@ -1,0 +1,41 @@
+.article {
+  &--2 {
+    & .article-2__img {
+      width: 100%;
+      height: 100vh;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .article {
+    &--2 {
+      & .article-2__img {
+        height: auto;
+
+        & img {
+          object-fit: unset;
+        }
+
+        &:first-of-type {
+          height: calc(100vh - 123px);
+
+          & img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 640px) {
+  .article {}
+}

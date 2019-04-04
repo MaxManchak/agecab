@@ -1,0 +1,40 @@
+.article {
+  &--6 {
+    width: 100%;
+    max-width: 580px;
+    color: #fff;
+    margin-top: 355px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .article {
+    &--6 {
+      padding-top: 0;
+      margin-top: 0;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 100%;
+
+      & .contact-form {
+        width: 60%;
+        padding-right: 40px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .article {
+    &--6 {
+      flex-direction: column;
+      align-items: center;
+
+      & .contact-form {
+        padding-right: 0;
+      }
+    }
+  }
+}

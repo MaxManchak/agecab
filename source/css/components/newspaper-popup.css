@@ -14,8 +14,6 @@
     background: transparent;
     width: 40px;
     height: 40px;
-    // display: flex;
-
     justify-content: center;
     align-items: center;
     font-size: 0;
@@ -84,7 +82,7 @@
   }
 }
 
-@media (max-width: 1900px) {
+@media (max-width: 1024px) {
   .popup-newspaper {
     position: fixed;
     z-index: 999;
@@ -184,12 +182,4 @@
   bottom: -100px;
   width: 400px;
   height: 600px;
-}
-
-.even .gradient {
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
-}
-
-.odd .gradient {
-  background-image: linear-gradient(right, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
 }

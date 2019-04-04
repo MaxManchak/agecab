@@ -6,7 +6,7 @@
 @@include( 'components/zoom.min.js' );
 
 
-('use strict');
+'use strict'
 
 jQuery(function($) {
 	if ($(window).width() > 640) {
@@ -24,31 +24,38 @@ jQuery(function($) {
 				$(this).closest('.form-group').removeClass('active');
 			}
 		});
-
-	if ($(window).width() > 640 && $(window).width() < 1900) {
+	var popupOpen = () => {
 		$('.articles-list').click(function(e) {
 			e.preventDefault();
 			$('.popup-newspaper').addClass('open');
 		});
+		}
+	if ($(window).width() > 640 && $(window).width() < 1900) {
+		popupOpen();
 	}
+
+	window.addEventListener("resize", function() {
+		if ($(window).width() > 640 && $(window).width() < 1900) {
+			popupOpen();
+		}
+	}, false );
+
 
 	$('.popup-newspaper__close').click(function(e) {
 		e.preventDefault();
 		$('.popup-newspaper').removeClass('open');
 	});
 
-	$('.menuToggle').on('click', function(e) {
+	$('.navigation__open').on('click', function(e) {
 		e.preventDefault();
-
-		if ($(this).hasClass('open')) {
-			$(this).removeClass('open');
-			$('.navigation').removeClass('open');
-			$('body').removeClass('fixed');
-		} else {
-			$(this).addClass('open');
 			$('.navigation').addClass('open');
 			$('body').addClass('fixed');
-		}
+	} );
+
+	$('.navigation__close').on('click', function(e) {
+		e.preventDefault();
+			$('.navigation').removeClass('open');
+			$('body').removeClass('fixed');
 	});
 
 	function showContent(link) {
@@ -74,80 +81,29 @@ jQuery(function($) {
 		showContent(link);
 	});
 
-	// $('.popup-newspaper__next').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	var all = Math.ceil($('.content-list li').length / 2);
-	// 	var count = $('.content-list').find('li.active').data('count');
-
-	// 	if (all > Math.ceil(count / 2)) {
-	// 		$('.content-list li').removeClass('active');
-	// 		$('.content-list li:nth-of-type(' + (count + 2) + ')').addClass('active');
-	// 		$('.content-list li:nth-of-type(' + (count + 2) + ')').addClass('active');
-	// 		newspaperCount();
-	// 	}
-	// });
-
-	// $('.popup-newspaper__prev').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	var all = Math.ceil($('.content-list li').length / 2);
-	// 	var count = $('.content-list').find('li.active').data('count');
-
-	// 	if (Math.ceil(count / 2) > 1) {
-	// 		$('.content-list li').removeClass('active');
-	// 		$('.content-list li:nth-of-type(' + (count - 1) + ')').addClass('active');
-	// 		$('.content-list li:nth-of-type(' + (count - 2) + ')').addClass('active');
-	// 		newspaperCount();
-	// 	}
-	// });
-
-	// var newspaperCount = () => {
-	// 	var all = Math.ceil($('.content-list li').length / 2);
-	// 	$('.content-list__count-all').html(all);
-	// 	var count = Math.ceil($('.content-list').find('li.active').data('count') / 2);
-	// 	$('.content-list__count-item').html(count);
-	// };
-	// newspaperCount();
-
 	if ($('*').is('.article__img-logo')) {
-		if ($(window).width() > 1900) {
 			$('.main').scroll(function() {
 				$('.article__img-logo').addClass('active');
 				setTimeout(() => {
 					$('.article__img-logo').removeClass('active');
 				}, 1000);
 			});
-		} else {
-			$(window).scroll(function() {
-				$('.article__img-logo').addClass('active');
-				setTimeout(() => {
-					$('.article__img-logo').removeClass('active');
-				}, 1000);
-			});
-		}
 	}
 
 
 	var flipbook = () => {
+
 		$( '#flipbook' ).turn({when: {
 			turning: function(event, page, view) {
-
-				var book = $(this),
-				currentPage = book.turn('page'),
-				pages = book.turn('pages');
-				$( '.content-list__count-count' ).html(currentPage);
-
+				flipPage( page );
 			},
-		},
-		gradients: true
-
-
+		}
 		});
 
 		var page = $( "#flipbook" ).turn( "page" );
 		var pages = $( "#flipbook" ).turn( "pages" );
-		$('.content-list__count-count').html(page);
-		$('.content-list__count-all').html(pages);
-
+		flipPage( page );
+		flipPages( pages );
 	};
 
 	$( '.popup-newspaper__next' ).click( function () {
@@ -156,8 +112,8 @@ jQuery(function($) {
 	$( '.popup-newspaper__prev' ).click( function () {
 		$( '#flipbook' ).turn( 'previous' );
 	})
+	if ( $( '*' ).is( '#flipbook' ) ) {flipbook();}
 
-	flipbook();
 
 
 	if ( $( window ).width() < 640 ) {
@@ -166,3 +122,14 @@ jQuery(function($) {
 
 
 });
+
+
+var flipPages = (pages) => {
+	jQuery('.content-list__count-all').html(pages);
+}
+var flipPage = ( page ) => {
+	if ( page > 1 ) {
+		page++
+	}
+	jQuery('.content-list__count-item').html(page);
+}
