@@ -32,10 +32,66 @@
         }
       }
     }
-
   }
 }
 
 @media (max-width: 640px) {
-  .article {}
+  .article--2 {
+    position: relative;
+
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: fixed;
+      top: 50%;
+      width: 46px;
+      height: 15px;
+      background-image: url(../images/arrow.svg);
+      z-index: 9;
+      display: none;
+    }
+
+    &::before {
+      left: 10px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &::after {
+      right: 10px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &.scroll {
+
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+
+
+  }
+
+  .article-2__wrap {
+    overflow: scroll;
+    width: 100%;
+    position: relative;
+
+    & img {
+      height: calc(100vh - 123px);
+      width: auto !important;
+      object-fit: unset !important;
+    }
+
+    &:first-child {
+      & img {
+        width: 100% !important;
+        object-fit: cover !important;
+      }
+    }
+
+
+  }
 }

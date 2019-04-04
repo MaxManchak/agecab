@@ -26,14 +26,15 @@
     }
 
     & p {
-      font-family: $fffl;
+      font-family: $fff;
 
       font-size: 16px;
       font-weight: 300;
       line-height: 22px;
 
       & b {
-        font-family: $fffb;
+        font-family: $fff;
+        font-weight: 500;
         font-size: 20px;
         line-height: 22px;
       }

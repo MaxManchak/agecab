@@ -6,7 +6,7 @@ input {
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
   color: #ffffff;
-  font-family: $fffl;
+  font-family: $fff;
   font-weight: 300;
   line-height: 31.15px;
   text-transform: uppercase;
@@ -124,7 +124,8 @@ label {
 
       & span {
         color: #ffffff;
-        font-family: $fffl;
+        font-family: $fff;
+        font-weight: 500;
         font-size: 18px;
         line-height: 21.6px;
         width: 50%;

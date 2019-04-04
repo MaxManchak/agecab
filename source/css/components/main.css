@@ -4,7 +4,12 @@
   height: 100vh;
   flex: 1;
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 
   & .footer__link {
     color: #ffffff;
@@ -178,7 +183,8 @@
   }
 
   &__title {
-    font-family: $fffl;
+    font-family: $fff;
+    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
   }
@@ -414,7 +420,8 @@
     text-align: right;
     max-width: 150px;
     color: #fff;
-    font-family: $fffl;
+    font-family: $fff;
+    font-weight: bold;
     font-size: 10px;
   }
 }

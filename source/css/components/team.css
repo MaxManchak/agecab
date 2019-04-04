@@ -79,7 +79,8 @@
 
   &__description {
     color: #707070;
-    font-family: $fffb;
+    font-family: $fff;
+    font-weight: 500;
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 55px;

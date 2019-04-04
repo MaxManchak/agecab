@@ -42,7 +42,7 @@
   }
 
   &__address {
-    font-family: $fffl;
+    font-family: 'Helvetica Neue', $fff;
     font-weight: normal;
     font-size: 25px;
     max-width: 220px;
@@ -55,7 +55,8 @@
   }
 
   &__mail {
-    font-family: $fffb;
+    font-family: $fff;
+    font-weight: 500;
     color: #fff;
     text-decoration: none;
   }

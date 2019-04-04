@@ -349,6 +349,10 @@
 @media (max-width: 640px) {
   .navigation {
     padding: 114px 35px 40px 35px;
+    left: auto;
+    min-width: 198px;
+    width: 50%;
+
 
     & li {
       & a {

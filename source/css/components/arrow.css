@@ -1,7 +1,7 @@
 @media (max-width: 1024px) {
 
   .site-title--1,
-  .article-2__img:first-child,
+  .article-2__wrap:first-child .article-2__img,
   .site-title--3,
   .site-title--4 {
     position: relative;
