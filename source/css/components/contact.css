@@ -42,8 +42,8 @@
   }
 
   &__address {
-    font-family: 'Helvetica Neue', $fff;
-    font-weight: normal;
+    font-family: $fff;
+    font-weight: 300;
     font-size: 25px;
     max-width: 220px;
     margin-bottom: 20px;

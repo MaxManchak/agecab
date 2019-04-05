@@ -79,6 +79,10 @@
     width: 100%;
     position: relative;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     & img {
       height: calc(100vh - 123px);
       width: auto !important;
