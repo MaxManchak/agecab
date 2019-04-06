@@ -185,6 +185,19 @@
   }
 }
 
+@media (max-height:980px) and (min-width:1900px) {
+  .site-title {
+
+    &--3,
+    &--4 {
+      & h1 {
+        font-size: 115px;
+        line-height: 1;
+      }
+    }
+  }
+}
+
 @media (max-width: 1900px) {
   .site-title {
     &--1 {

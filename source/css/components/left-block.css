@@ -107,6 +107,18 @@
   opacity: 0;
 }
 
+
+@media (max-height:980px) and (min-width:1900px) {
+  .left-block {
+
+    &--3,
+    &--4,
+    &--5 {
+      padding-top: 40px;
+    }
+  }
+}
+
 @media(max-width:1900px) {
   .left-block {
     width: 17.1875%;
@@ -132,6 +144,33 @@
     display: flex;
     // position: absolute;
     align-self: flex-start;
+  }
+
+  .left-block {
+    &--1 {
+      background-image: url(../images/left-bg-1-mob.jpg);
+    }
+
+    &--2 {
+      background-image: url(../images/left-bg-2-mob.jpg);
+    }
+
+    &--3 {
+      background-image: url(../images/left-bg-3-mob.jpg);
+    }
+
+    &--4 {
+      background-image: url(../images/left-bg-4-mob.jpg);
+    }
+
+    &--5 {
+      background-image: url(../images/left-bg-5-mob.jpg);
+    }
+
+    &--6 {
+      background-image: url(../images/left-bg-6-mob.jpg);
+
+    }
   }
 
   .left-block {

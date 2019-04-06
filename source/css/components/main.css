@@ -70,8 +70,8 @@
   }
 
   &--5 {
-    // display: flex;
-    // align-items: flex-end;
+    display: flex;
+    align-items: flex-end;
   }
 
   &--6 {
@@ -236,6 +236,7 @@
     }
 
     &--5 {
+      display: block;
       width: 60%;
       padding: 0;
       margin: 0;
@@ -256,13 +257,17 @@
     width: 100%;
     max-width: 100%;
     text-align: center;
-    max-height: 192px;
+    max-height: 230px;
 
     & li {
       position: relative;
-      padding-top: 10px;
-      padding-bottom: 10px;
       margin-bottom: 0;
+
+      & a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+      }
 
       &:first-of-type {
         margin-top: 0;
