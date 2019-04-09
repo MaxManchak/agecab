@@ -78,24 +78,27 @@ jQuery( function ( $ ) {
 			success: function(data) {
 				var content = $(data).filter('#content');
 				var innerContent = $(content).html();
-				$('.content-list').html(innerContent);
-				// newspaperCount();
+				$( '.content-list' ).html( innerContent );
+				console.log('ajax sucesfull');
+
 				flipbook();
 			},
 		});
 	}
 
-	if ( $( window ).width() < 1024 && $( window ).width() > 640 ) {
-		$('.articles-list a').click(function(e) {
-			e.preventDefault();
-			var link = $(this).attr('href');
-			$( '#flipbook' ).turn( 'destroy' );
+
+	$('.articles-list a').click(function(e) {
+		e.preventDefault();
+		var link = $(this).attr('href');
+		$( '#flipbook' ).turn( 'destroy' );
+
+		if ( $( window ).width() < 1024 && $( window ).width() > 640 ) {
 			popupOpen();
 			changeSizeBook();
+		}
+		showContent(link);
+	});
 
-			showContent(link);
-		});
-	}
 
 
 	// отображение логотипов  при прокрутке
