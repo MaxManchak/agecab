@@ -102,14 +102,14 @@ jQuery( function ( $ ) {
 
 
 	// отображение логотипов  при прокрутке
-	if ($('*').is('.article__img-logo')) {
-		$('.main').scroll(function() {
-			$('.article__img-logo').addClass('active');
-			setTimeout(() => {
-				$('.article__img-logo').removeClass('active');
-			}, 1000);
-		});
-	}
+	// if ($('*').is('.article__img-logo')) {
+	// 	$('.main').scroll(function() {
+	// 		$('.article__img-logo').addClass('active');
+	// 		setTimeout(() => {
+	// 			$('.article__img-logo').removeClass('active');
+	// 		}, 1000);
+	// 	});
+	// }
 
 
 	// перелистывание страниц новостей
